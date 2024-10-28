@@ -26,7 +26,7 @@ class BookService {
     }
   }
 
-  async getAllBooks() {
+  async getAllBooksService() {
     try {
       const books = await BookEntity.findAll();
       return books;
@@ -35,7 +35,7 @@ class BookService {
     }
   }
 
-  async getBookByTitle(title) {
+  async getBookByTitleService(title) {
     try {
       const bookTitle = await BookEntity.findAll({
         where: {
@@ -51,7 +51,7 @@ class BookService {
     }
   }
 
-  async getBookByWriter(writer) {
+  async getBookByWriterService(writer) {
     try {
       const bookWriter = await BookEntity.findAll({
         where: {
@@ -67,7 +67,7 @@ class BookService {
     }
   }
 
-  async getBookByGenre(genre) {
+  async getBookByGenreService(genre) {
     try {
       const bookGenre = await BookEntity.findAll({
         where: {
@@ -82,4 +82,43 @@ class BookService {
       return error;
     }
   }
+
+  async updateTitleBookService(id, newTitle) {
+    try {
+      const bookId = await BookEntity.findByPk(id);
+      if (!bookId) {
+        return `${ERRORS.NOT_FOUND}`;
+      }
+      const updateTitle = await BookEntity.update(
+        { title: newTitle },
+        {
+          where: {
+            id,
+          },
+        }
+      );
+      return `${SUCESS.CREATED}`;
+    } catch (error) {
+      return error;
+    }
+  }
+
+  async deleteBookService(id) {
+    try {
+      const bookId = await BookEntity.findByPk(id);
+      if (!bookId) {
+        return `${ERRORS.NOT_FOUND}`;
+      }
+      const deleteBook = await BookEntity.destroy({
+        where: {
+          id,
+        },
+      });
+      return deleteBook;
+    } catch (error) {
+      return error;
+    }
+  }
 }
+
+export { BookService };
