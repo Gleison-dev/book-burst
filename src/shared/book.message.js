@@ -8,3 +8,5 @@ const SUCESS = {
   UPDATED: "Livro atualizado com sucesso!",
   DELETED: "Livro deletado com sucesso!",
 };
+
+export { ERRORS, SUCESS }
