@@ -2,7 +2,7 @@ import { BookEntity } from "../entities/book.entity.js";
 import { ERRORS, SUCESS } from "../shared/book.message.js";
 
 class BookService {
-  async createBookService(title, writer, genre, year_release) {
+  async createBookService(title, writer, genre, year_release, link) {
     try {
       await BookEntity.sync();
       const verifyBookExists = await BookEntity.findOne({
@@ -19,6 +19,7 @@ class BookService {
         writer,
         genre,
         year_release,
+        link,
       });
       return `${SUCESS.CREATED}`;
     } catch (error) {
