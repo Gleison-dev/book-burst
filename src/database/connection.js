@@ -21,7 +21,7 @@ const sequelize = new Sequelize(
 const testConnection = async () => {
   try {
     await sequelize.authenticate();
-    console.log("Conexão com o bando de dados efetuada!");
+    console.log("Conexão com o banco de dados efetuada!");
   } catch (error) {
     return console.error("Não foi possível conectar com o banco de dados :(");
   }
