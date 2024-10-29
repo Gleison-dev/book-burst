@@ -19,3 +19,5 @@ O book burst está sendo desenvolvido com as seguintes ferramentas:
 O projeto ainda está rodando no localhost. Porém as rotas são:
 
 - Cadastrar livros: https://localhost:3333/createBook - Dados para preencher no body: title, writer, genre, year_release, link
+
+- Listar todos os livros: https://localhost:3333/books - não é necessário preencher dados no body.
