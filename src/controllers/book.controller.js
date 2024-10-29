@@ -1,4 +1,4 @@
-import { BookService } from "../services/Book.service";
+import { BookService } from "../services/Book.service.js";
 
 const instanceBookService = new BookService();
 
