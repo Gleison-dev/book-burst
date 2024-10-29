@@ -115,7 +115,7 @@ class BookService {
           id,
         },
       });
-      return deleteBook;
+      return `${SUCESS.DELETED}`;
     } catch (error) {
       return error;
     }

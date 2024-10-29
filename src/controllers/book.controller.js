@@ -50,7 +50,7 @@ const updateTitle = async (req, res) => {
 const deleteBook = async (req, res) => {
   const { id } = req.params;
   const deletedBook = await instanceBookService.deleteBookService(id);
-  res.json({ deleteBook });
+  res.json({ deletedBook });
 };
 
 export {
