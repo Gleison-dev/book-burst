@@ -13,3 +13,9 @@ O book burst está sendo desenvolvido com as seguintes ferramentas:
 - Express
 - Sequelize
 - Postgress
+
+### COMO USAR A API
+
+O projeto ainda está rodando no localhost. Porém as rotas são:
+
+- Cadastrar livros: https://localhost:3333/createBook - Dados para preencher no body: title, writer, genre, year_release, link
