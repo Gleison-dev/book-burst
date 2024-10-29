@@ -98,7 +98,7 @@ class BookService {
           },
         }
       );
-      return `${SUCESS.CREATED}`;
+      return `${SUCESS.UPDATED}`;
     } catch (error) {
       return error;
     }

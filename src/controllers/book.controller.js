@@ -44,7 +44,7 @@ const updateTitle = async (req, res) => {
     id,
     newTitle
   );
-  res.json({ updateTitle });
+  res.json({ updatedTitle });
 };
 
 const deleteBook = async (req, res) => {
